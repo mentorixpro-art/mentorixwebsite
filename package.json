@@ -1,13 +1,12 @@
 {
-  "name": "react-vite-tailwind",
+  "name": "mentorix-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npx vite",
     "build": "npx vite build",
-    "start": "npx serve -s dist -l tcp://0.0.0.0:$PORT",
-    "preview": "vite preview --host 0.0.0.0 --port 4173"
+    "start": "npx serve -s dist -l tcp://0.0.0.0:$PORT"
   },
   "dependencies": {
     "clsx": "2.1.1",
