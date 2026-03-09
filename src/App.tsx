@@ -31,8 +31,12 @@ import {
   Zap,
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const SHOPIER_LINK =
   'https://www.shopier.com/mentorixpro?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnzH8fCVvs78sOXTRSOrh8xThjzQ_NVesWOzu-AR-o6768rkUSO_hV1uR1KPU_aem_yIaM7jgL-JNOJUyyR09O-w';
+=======
+const SHOPIER_LINK = 'https://www.shopier.com/mentorixpro?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnzH8fCVvs78sOXTRSOrh8xThjzQ_NVesWOzu-AR-o6768rkUSO_hV1uR1KPU_aem_yIaM7jgL-JNOJUyyR09O-w';
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
 const WHATSAPP_LINK = 'https://wa.me/905077380751';
 const INSTAGRAM_LINK = 'https://www.instagram.com/mentorix.pro/';
 
@@ -53,7 +57,11 @@ const SECTION_BACKGROUNDS = {
 } as const;
 
 const fadeInUp = {
+<<<<<<< HEAD
   hidden: { opacity: 0, y: 28 },
+=======
+  hidden: { opacity: 0, y: 40 },
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
   visible: { opacity: 1, y: 0 },
 };
 
@@ -63,14 +71,22 @@ const staggerContainer = {
 };
 
 const scaleIn = {
+<<<<<<< HEAD
   hidden: { opacity: 0, scale: 0.97 },
+=======
+  hidden: { opacity: 0, scale: 0.96 },
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
   visible: { opacity: 1, scale: 1 },
 };
 
 function buildSectionBackground(imageUrl: string, extraOverlay?: string) {
   const overlay =
     extraOverlay ??
+<<<<<<< HEAD
     'linear-gradient(180deg, rgba(5,5,6,0.62) 0%, rgba(5,5,6,0.78) 45%, rgba(5,5,6,0.9) 100%)';
+=======
+    'linear-gradient(180deg, rgba(5,5,6,0.66) 0%, rgba(5,5,6,0.82) 45%, rgba(5,5,6,0.92) 100%)';
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
   return `${overlay}, url('${imageUrl}')`;
 }
 
@@ -78,10 +94,18 @@ function SectionBackground({
   image,
   overlay,
   className = '',
+<<<<<<< HEAD
+=======
+  children,
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
 }: {
   image: string;
   overlay?: string;
   className?: string;
+<<<<<<< HEAD
+=======
+  children?: ReactNode;
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
 }) {
   return (
     <div className={`absolute inset-0 overflow-hidden ${className}`} aria-hidden="true">
@@ -89,7 +113,14 @@ function SectionBackground({
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: buildSectionBackground(image, overlay) }}
       />
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-black/10" />
+=======
+      <div className="absolute inset-0 media-depth-overlay" />
+      <div className="absolute inset-0 media-noise-overlay opacity-25 mix-blend-soft-light" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.14),transparent_32%),radial-gradient(circle_at_80%_18%,rgba(22,101,52,0.14),transparent_28%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.08),transparent_30%)]" />
+      {children}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
     </div>
   );
 }
@@ -108,12 +139,20 @@ function HeroVideoBackground() {
       >
         <source src="/media/hero-video.mp4" type="video/mp4" />
       </video>
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0.56)_38%,rgba(0,0,0,0.84)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(249,115,22,0.12),transparent_26%),radial-gradient(circle_at_82%_16%,rgba(22,101,52,0.12),transparent_22%)]" />
+=======
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.42)_0%,rgba(0,0,0,0.62)_38%,rgba(0,0,0,0.86)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(249,115,22,0.2),transparent_28%),radial-gradient(circle_at_82%_16%,rgba(22,101,52,0.2),transparent_24%),radial-gradient(circle_at_50%_78%,rgba(59,130,246,0.12),transparent_28%)]" />
+      <div className="absolute inset-0 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 media-noise-overlay opacity-25 mix-blend-soft-light" />
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
     </div>
   );
 }
 
+<<<<<<< HEAD
 function AnimatedCounter({
   end,
   duration = 2,
@@ -123,6 +162,9 @@ function AnimatedCounter({
   duration?: number;
   suffix?: string;
 }) {
+=======
+function AnimatedCounter({ end, duration = 2, suffix = '' }: { end: number; duration?: number; suffix?: string }) {
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
   const [count, setCount] = useState(0);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
@@ -142,12 +184,16 @@ function AnimatedCounter({
     return () => clearInterval(timer);
   }, [duration, end, inView]);
 
+<<<<<<< HEAD
   return (
     <span ref={ref}>
       {count}
       {suffix}
     </span>
   );
+=======
+  return <span ref={ref}>{count}{suffix}</span>;
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
 }
 
 function AnimatedBarChart() {
@@ -162,7 +208,11 @@ function AnimatedBarChart() {
           key={i}
           initial={{ scaleY: 0 }}
           animate={inView ? { scaleY: 1 } : { scaleY: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.7, delay: i * 0.08 }}
+=======
+          transition={{ duration: 0.8, delay: i * 0.1 }}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
           style={{ height: `${height}%`, backgroundColor: colors[i], transformOrigin: 'bottom' }}
           className="w-4 rounded-t-sm md:w-6"
         />
@@ -190,7 +240,11 @@ function AnimatedLineChart() {
         strokeLinecap="round"
         initial={{ pathLength: 0 }}
         animate={inView ? { pathLength: 1 } : { pathLength: 0 }}
+<<<<<<< HEAD
         transition={{ duration: 1.8, ease: 'easeInOut' }}
+=======
+        transition={{ duration: 2, ease: 'easeInOut' }}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
       />
       {[
         { cx: 50, cy: 45 },
@@ -206,13 +260,18 @@ function AnimatedLineChart() {
           fill="#f97316"
           initial={{ scale: 0, opacity: 0 }}
           animate={inView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.35, delay: 0.45 + i * 0.16 }}
+=======
+          transition={{ duration: 0.4, delay: 0.5 + i * 0.2 }}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
         />
       ))}
     </svg>
   );
 }
 
+<<<<<<< HEAD
 function FloatingCard({
   children,
   delay = 0,
@@ -233,12 +292,24 @@ function FloatingCard({
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, delay }}
       >
+=======
+function FloatingCard({ children, delay = 0, className = '' }: { children: ReactNode; delay?: number; className?: string }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay }}
+      className={`glass-card rounded-xl p-4 ${className}`}
+    >
+      <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, delay }}>
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
         {children}
       </motion.div>
     </motion.div>
   );
 }
 
+<<<<<<< HEAD
 function BackgroundOrb({
   color,
   size,
@@ -256,6 +327,15 @@ function BackgroundOrb({
       style={{ background: color }}
       animate={{ scale: [1, 1.12, 1], opacity: [0.12, 0.24, 0.12] }}
       transition={{ duration: 9, repeat: Infinity, delay }}
+=======
+function BackgroundOrb({ color, size, position, delay = 0 }: { color: string; size: string; position: string; delay?: number }) {
+  return (
+    <motion.div
+      className={`absolute ${size} ${position} rounded-full blur-3xl opacity-30`}
+      style={{ background: color }}
+      animate={{ scale: [1, 1.2, 1], opacity: [0.18, 0.38, 0.18] }}
+      transition={{ duration: 8, repeat: Infinity, delay }}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
     />
   );
 }
@@ -274,6 +354,7 @@ function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
+<<<<<<< HEAD
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
         scrolled ? 'glass-strong py-3' : 'bg-transparent py-5'
       }`}
@@ -281,6 +362,13 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <a href="#" className="flex items-center gap-3">
           <div className="glass flex items-center rounded-2xl px-3 py-2 shadow-[0_0_30px_rgba(249,115,22,0.10)]">
+=======
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${scrolled ? 'glass-strong py-3' : 'bg-transparent py-5'}`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
+        <a href="#" className="flex items-center gap-3">
+          <div className="glass flex items-center rounded-2xl px-3 py-2 shadow-[0_0_30px_rgba(249,115,22,0.12)]">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             <img
               src="/logo.png"
               alt="MENTORİX PRO logosu"
@@ -294,6 +382,7 @@ function Navbar() {
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
+<<<<<<< HEAD
           <a href="#products" className="text-sm font-medium text-gray-300 transition-colors hover:text-white">
             Ürünler
           </a>
@@ -306,6 +395,12 @@ function Navbar() {
           <a href="#faq" className="text-sm font-medium text-gray-300 transition-colors hover:text-white">
             SSS
           </a>
+=======
+          <a href="#products" className="text-sm font-medium text-gray-300 transition-colors hover:text-white">Ürünler</a>
+          <a href="#features" className="text-sm font-medium text-gray-300 transition-colors hover:text-white">Özellikler</a>
+          <a href="#how-it-works" className="text-sm font-medium text-gray-300 transition-colors hover:text-white">Nasıl İşliyor</a>
+          <a href="#faq" className="text-sm font-medium text-gray-300 transition-colors hover:text-white">SSS</a>
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
         </div>
 
         <div className="flex items-center gap-3">
@@ -318,12 +413,16 @@ function Navbar() {
             <MessageCircle className="h-4 w-4" />
             <span>İletişim</span>
           </a>
+<<<<<<< HEAD
           <a
             href={SHOPIER_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary flex items-center gap-2 px-5 py-2.5 text-sm"
           >
+=======
+          <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2 px-5 py-2.5 text-sm">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             <ShoppingBag className="h-4 w-4" />
             <span>Satın Al</span>
           </a>
@@ -335,13 +434,18 @@ function Navbar() {
 
 function HeroSection() {
   const { scrollY } = useScroll();
+<<<<<<< HEAD
   const y = useTransform(scrollY, [0, 500], [0, 120]);
+=======
+  const y = useTransform(scrollY, [0, 500], [0, 140]);
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
       <HeroVideoBackground />
       <div className="absolute inset-0">
+<<<<<<< HEAD
         <BackgroundOrb
           color="linear-gradient(135deg, #f97316, #ea580c)"
           size="h-96 w-96"
@@ -353,6 +457,18 @@ function HeroSection() {
           size="h-80 w-80"
           position="-right-40 top-40"
           delay={2}
+=======
+        <BackgroundOrb color="linear-gradient(135deg, #f97316, #ea580c)" size="h-96 w-96" position="-left-48 top-20" delay={0} />
+        <BackgroundOrb color="linear-gradient(135deg, #166534, #14532d)" size="h-80 w-80" position="-right-40 top-40" delay={2} />
+        <BackgroundOrb color="linear-gradient(135deg, #3b82f6, #1d4ed8)" size="h-72 w-72" position="bottom-20 left-1/4" delay={4} />
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
         />
       </div>
 
@@ -360,7 +476,11 @@ function HeroSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-center lg:text-left">
             <motion.div variants={scaleIn} className="mb-6 flex justify-center lg:justify-start">
+<<<<<<< HEAD
               <div className="glass-strong inline-flex rounded-[22px] px-4 py-3 shadow-[0_0_40px_rgba(249,115,22,0.12)]">
+=======
+              <div className="glass-strong inline-flex rounded-[22px] px-4 py-3 shadow-[0_0_60px_rgba(249,115,22,0.14)]">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <img
                   src="/logo.png"
                   alt="MENTORİX PRO"
@@ -380,8 +500,12 @@ function HeroSection() {
             </motion.h1>
 
             <motion.p variants={fadeInUp} className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-gray-300 md:text-xl lg:mx-0">
+<<<<<<< HEAD
               LGS, YKS, Fransızca ve İngilizce koçları için geliştirilen premium takip sistemleriyle
               öğrenci yönetimini kolaylaştırın, süreci hızlandırın ve profesyonel bir düzene geçin.
+=======
+              LGS, YKS, Fransızca ve İngilizce koçları için geliştirilen premium takip sistemleriyle öğrenci yönetimini kolaylaştırın, süreci hızlandırın ve profesyonel bir düzene geçin.
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
@@ -389,6 +513,7 @@ function HeroSection() {
                 <Play className="h-4 w-4" />
                 Hemen İncele
               </a>
+<<<<<<< HEAD
               <a
                 href={SHOPIER_LINK}
                 target="_blank"
@@ -404,15 +529,26 @@ function HeroSection() {
                 rel="noopener noreferrer"
                 className="btn-whatsapp flex items-center justify-center gap-2"
               >
+=======
+              <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="btn-green flex items-center justify-center gap-2">
+                <ShoppingBag className="h-4 w-4" />
+                Shopier'den Satın Al
+              </a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-whatsapp flex items-center justify-center gap-2">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp'tan Bilgi Al
               </a>
             </motion.div>
 
+<<<<<<< HEAD
             <motion.div
               variants={fadeInUp}
               className="mt-12 grid grid-cols-2 gap-4 border-t border-white/10 pt-8 md:grid-cols-4"
             >
+=======
+            <motion.div variants={fadeInUp} className="mt-12 grid grid-cols-2 gap-4 border-t border-white/10 pt-8 md:grid-cols-4">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               {[
                 { icon: Shield, text: 'Hazır ve Profesyonel Altyapı' },
                 { icon: Users, text: 'Düzenli Öğrenci Takibi' },
@@ -428,6 +564,7 @@ function HeroSection() {
           </motion.div>
 
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.25 }}
@@ -440,6 +577,15 @@ function HeroSection() {
               transition={{ duration: 7, repeat: Infinity }}
               className="relative glass-card rounded-[28px] p-6"
             >
+=======
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 scale-110 bg-gradient-to-r from-orange-500/20 via-green-500/10 to-blue-500/20 blur-3xl" />
+            <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 7, repeat: Infinity }} className="relative glass-card rounded-[28px] p-6 glow-orange">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="h-3 w-3 rounded-full bg-red-500" />
@@ -456,6 +602,7 @@ function HeroSection() {
                     { label: 'Tamamlanan', value: 156, color: 'text-green-500' },
                     { label: 'Bekleyen', value: 12, color: 'text-blue-500' },
                   ].map((stat, i) => (
+<<<<<<< HEAD
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 20 }}
@@ -467,11 +614,20 @@ function HeroSection() {
                       <p className={`text-xl font-bold ${stat.color}`}>
                         <AnimatedCounter end={stat.value} />
                       </p>
+=======
+                    <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.1 }} className="rounded-lg bg-zinc-800/50 p-3">
+                      <p className="mb-1 text-xs text-gray-500">{stat.label}</p>
+                      <p className={`text-xl font-bold ${stat.color}`}><AnimatedCounter end={stat.value} /></p>
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                     </motion.div>
                   ))}
                 </div>
 
+<<<<<<< HEAD
                 <div className="rounded-lg bg-zinc-800/45 p-4">
+=======
+                <div className="rounded-lg bg-zinc-800/50 p-4">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <div className="mb-3 flex items-center justify-between">
                     <span className="text-xs text-gray-400">Haftalık Performans</span>
                     <TrendingUp className="h-4 w-4 text-green-500" />
@@ -479,7 +635,11 @@ function HeroSection() {
                   <AnimatedBarChart />
                 </div>
 
+<<<<<<< HEAD
                 <div className="rounded-lg bg-zinc-800/45 p-4">
+=======
+                <div className="rounded-lg bg-zinc-800/50 p-4">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <div className="mb-3 flex items-center justify-between">
                     <span className="text-xs text-gray-400">Öğrenci Gelişimi</span>
                     <LineChart className="h-4 w-4 text-orange-500" />
@@ -493,6 +653,7 @@ function HeroSection() {
                     { name: 'Mehmet K.', progress: 72, subject: 'YKS' },
                     { name: 'Zeynep A.', progress: 91, subject: 'İngilizce' },
                   ].map((student, i) => (
+<<<<<<< HEAD
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, x: -18 }}
@@ -500,6 +661,9 @@ function HeroSection() {
                       transition={{ delay: 0.8 + i * 0.1 }}
                       className="flex items-center gap-3 rounded-lg bg-zinc-800/25 p-2"
                     >
+=======
+                    <motion.div key={i} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 + i * 0.1 }} className="flex items-center gap-3 rounded-lg bg-zinc-800/30 p-2">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xs font-medium">
                         {student.name[0]}
                       </div>
@@ -512,7 +676,11 @@ function HeroSection() {
                           <motion.div
                             initial={{ width: 0 }}
                             animate={{ width: `${student.progress}%` }}
+<<<<<<< HEAD
                             transition={{ duration: 1, delay: 0.95 + i * 0.1 }}
+=======
+                            transition={{ duration: 1, delay: 1 + i * 0.1 }}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                             className="h-full rounded-full bg-gradient-to-r from-orange-500 to-green-500"
                           />
                         </div>
@@ -523,14 +691,22 @@ function HeroSection() {
               </div>
             </motion.div>
 
+<<<<<<< HEAD
             <FloatingCard delay={0.45} className="absolute -top-4 right-2 md:right-8">
+=======
+            <FloatingCard delay={0.5} className="absolute -top-4 right-2 md:right-8">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-green-500" />
                 <span className="text-sm font-medium">+12 Yeni Kayıt</span>
               </div>
             </FloatingCard>
 
+<<<<<<< HEAD
             <FloatingCard delay={0.7} className="absolute -bottom-4 left-2 md:left-8">
+=======
+            <FloatingCard delay={0.8} className="absolute -bottom-4 left-2 md:left-8">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-orange-500" />
                 <span className="text-sm font-medium">%94 Süreç Kontrolü</span>
@@ -540,6 +716,7 @@ function HeroSection() {
         </div>
       </motion.div>
 
+<<<<<<< HEAD
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -551,6 +728,10 @@ function HeroSection() {
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center gap-2 text-gray-400"
         >
+=======
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="flex flex-col items-center gap-2 text-gray-400">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
           <span className="text-xs">Keşfet</span>
           <ChevronDown className="h-5 w-5" />
         </motion.div>
@@ -579,15 +760,25 @@ function ProblemSection() {
 
   return (
     <section className="relative overflow-hidden py-24">
+<<<<<<< HEAD
       <SectionBackground image={SECTION_BACKGROUNDS.problem} />
+=======
+      <SectionBackground image={SECTION_BACKGROUNDS.problem}>
+        <BackgroundOrb color="linear-gradient(135deg, #f97316, #ea580c)" size="h-96 w-96" position="-right-48 top-20" delay={0} />
+      </SectionBackground>
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
 
       <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer}>
+<<<<<<< HEAD
             <motion.span
               variants={fadeInUp}
               className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500"
             >
+=======
+            <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               Problem ve Çözüm
             </motion.span>
             <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -599,6 +790,7 @@ function ProblemSection() {
 
             <div className="space-y-4">
               {problems.map((problem, i) => (
+<<<<<<< HEAD
                 <motion.div
                   key={problem}
                   initial={{ opacity: 0, x: -20 }}
@@ -606,6 +798,9 @@ function ProblemSection() {
                   transition={{ duration: 0.45, delay: i * 0.08 }}
                   className="glass-card flex items-center gap-4 rounded-xl p-4"
                 >
+=======
+                <motion.div key={problem} initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }} transition={{ duration: 0.5, delay: i * 0.1 }} className="glass-card flex items-center gap-4 rounded-xl p-4">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-500/10 text-red-400">
                     <Clock className="h-5 w-5" />
                   </div>
@@ -615,12 +810,16 @@ function ProblemSection() {
             </div>
           </motion.div>
 
+<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 26 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 26 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="glass-card rounded-[28px] p-8"
           >
+=======
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }} transition={{ duration: 0.8, delay: 0.2 }} className="glass-card rounded-[28px] p-8">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             <div className="mb-6 flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500/20 to-green-600/10">
                 <Shield className="h-6 w-6 text-green-500" />
@@ -635,6 +834,7 @@ function ProblemSection() {
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
               {solutions.map((solution, i) => (
+<<<<<<< HEAD
                 <motion.div
                   key={solution}
                   initial={{ opacity: 0, scale: 0.96 }}
@@ -642,6 +842,9 @@ function ProblemSection() {
                   transition={{ duration: 0.35, delay: 0.25 + i * 0.06 }}
                   className="rounded-2xl border border-white/8 bg-white/5 p-4"
                 >
+=======
+                <motion.div key={solution} initial={{ opacity: 0, scale: 0.95 }} animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }} transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }} className="rounded-2xl border border-white/8 bg-white/5 p-4">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <div className="mb-2 flex items-center gap-2 text-orange-500">
                     <CheckCircle2 className="h-4 w-4" />
                     <span className="text-sm font-medium">Avantaj</span>
@@ -663,8 +866,12 @@ function ProductsSection() {
   const products = [
     {
       title: 'LGS Koç Takip Sistemi',
+<<<<<<< HEAD
       description:
         'LGS hazırlık sürecindeki öğrencileri takip etmek için hazırlanmış profesyonel bir koçluk sistemi. Konu takibi, deneme analizi, gelişim takibi ve süreç düzeni sağlar.',
+=======
+      description: 'LGS hazırlık sürecindeki öğrencileri takip etmek için hazırlanmış profesyonel bir koçluk sistemi. Konu takibi, deneme analizi, gelişim takibi ve süreç düzeni sağlar.',
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
       benefits: ['Konu takibi', 'Deneme analizi', 'Gelişim kontrolü'],
       icon: Target,
       bg: SECTION_BACKGROUNDS.lgs,
@@ -672,8 +879,12 @@ function ProductsSection() {
     },
     {
       title: 'YKS Koç Takip Sistemi',
+<<<<<<< HEAD
       description:
         'TYT ve AYT hazırlık sürecini daha düzenli yönetmek isteyen koçlar için tasarlanmış kapsamlı takip sistemi. Hedef kontrolü, performans takibi ve planlı ilerleme sunar.',
+=======
+      description: 'TYT ve AYT hazırlık sürecini daha düzenli yönetmek isteyen koçlar için tasarlanmış kapsamlı takip sistemi. Hedef kontrolü, performans takibi ve planlı ilerleme sunar.',
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
       benefits: ['Hedef kontrolü', 'Performans takibi', 'Planlı ilerleme'],
       icon: BarChart3,
       bg: SECTION_BACKGROUNDS.yks,
@@ -681,8 +892,12 @@ function ProductsSection() {
     },
     {
       title: 'Fransızca Koç Takip Sistemi',
+<<<<<<< HEAD
       description:
         'Fransızca öğretmenleri için geliştirilen profesyonel öğrenci takip sistemi. Ders süreci, gelişim kontrolü ve düzenli akademik takip imkânı sunar.',
+=======
+      description: 'Fransızca öğretmenleri için geliştirilen profesyonel öğrenci takip sistemi. Ders süreci, gelişim kontrolü ve düzenli akademik takip imkânı sunar.',
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
       benefits: ['Ders süreci', 'Gelişim kontrolü', 'Akademik düzen'],
       icon: BookOpen,
       bg: SECTION_BACKGROUNDS.fransizca,
@@ -690,8 +905,12 @@ function ProductsSection() {
     },
     {
       title: 'İngilizce Koç Takip Sistemi',
+<<<<<<< HEAD
       description:
         'İngilizce öğretmenlerinin öğrenci gelişimini profesyonel şekilde takip etmesini sağlayan modern sistem. Grammar, vocabulary, ödev ve gelişim sürecini düzenli hale getirir.',
+=======
+      description: 'İngilizce öğretmenlerinin öğrenci gelişimini profesyonel şekilde takip etmesini sağlayan modern sistem. Grammar, vocabulary, ödev ve gelişim sürecini düzenli hale getirir.',
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
       benefits: ['Grammar takibi', 'Vocabulary düzeni', 'Ödev süreci'],
       icon: GraduationCap,
       bg: SECTION_BACKGROUNDS.ingilizce,
@@ -701,6 +920,7 @@ function ProductsSection() {
 
   return (
     <section id="products" className="relative overflow-hidden py-24">
+<<<<<<< HEAD
       <SectionBackground image={SECTION_BACKGROUNDS.showcase} overlay="linear-gradient(180deg, rgba(5,5,6,0.78) 0%, rgba(5,5,6,0.9) 100%)" />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
@@ -714,6 +934,18 @@ function ProductsSection() {
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500"
           >
+=======
+      <SectionBackground image={SECTION_BACKGROUNDS.lgs} overlay="linear-gradient(180deg, rgba(5,5,6,0.72) 0%, rgba(5,5,6,0.88) 100%)">
+        <div className="absolute inset-0 grid grid-cols-1 opacity-20 md:grid-cols-2">
+          <div className="border-r border-white/5 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: buildSectionBackground(SECTION_BACKGROUNDS.yks, 'linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.44))') }} />
+          <div className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: buildSectionBackground(SECTION_BACKGROUNDS.fransizca, 'linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.44))') }} />
+        </div>
+      </SectionBackground>
+
+      <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
+        <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer} className="mb-16 text-center">
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Ürünler
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -728,6 +960,7 @@ function ProductsSection() {
           {products.map((product, i) => (
             <motion.div
               key={product.title}
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 28 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
               transition={{ duration: 0.55, delay: i * 0.1 }}
@@ -745,10 +978,23 @@ function ProductsSection() {
               <div className="relative z-10 p-8">
                 <div className="mb-6 flex items-center justify-between">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/8 backdrop-blur-md">
+=======
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: i * 0.12 }}
+              className="card-hover group relative overflow-hidden rounded-[28px] border border-white/8 p-8"
+              style={{ backgroundImage: buildSectionBackground(product.bg, 'linear-gradient(180deg, rgba(10,10,12,0.78), rgba(10,10,12,0.94))'), backgroundSize: 'cover', backgroundPosition: 'center' }}
+            >
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_28%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="relative z-10">
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/6 backdrop-blur-md">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                     <product.icon className={`h-7 w-7 ${product.accent}`} />
                   </div>
                   <div className="glass rounded-full px-3 py-1 text-xs text-gray-300">Premium Sistem</div>
                 </div>
+<<<<<<< HEAD
 
                 <h3 className="font-display mb-4 text-2xl font-semibold">{product.title}</h3>
                 <p className="mb-6 leading-relaxed text-gray-300">{product.description}</p>
@@ -759,10 +1005,18 @@ function ProductsSection() {
                       key={benefit}
                       className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-sm text-gray-200"
                     >
+=======
+                <h3 className="font-display mb-4 text-2xl font-semibold">{product.title}</h3>
+                <p className="mb-6 leading-relaxed text-gray-300">{product.description}</p>
+                <div className="mb-8 flex flex-wrap gap-2">
+                  {product.benefits.map((benefit) => (
+                    <span key={benefit} className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-sm text-gray-200">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                       {benefit}
                     </span>
                   ))}
                 </div>
+<<<<<<< HEAD
 
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
@@ -782,6 +1036,16 @@ function ProductsSection() {
                   >
                     {i === 2 ? <MessageCircle className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
                     {i === 2 ? "WhatsApp'tan Sor" : 'Detayları İncele'}
+=======
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-2">
+                    <ShoppingBag className="h-4 w-4" />
+                    Şimdi Satın Al
+                  </a>
+                  <a href={i === 2 ? WHATSAPP_LINK : '#showcase'} target={i === 2 ? '_blank' : undefined} rel={i === 2 ? 'noopener noreferrer' : undefined} className="btn-secondary flex items-center justify-center gap-2">
+                    {i === 2 ? <MessageCircle className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+                    {i === 2 ? "WhatsApp'tan Sor" : i === 3 ? 'Hemen Sahip Ol' : i === 1 ? 'Detayları İncele' : 'Detayları İncele'}
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   </a>
                 </div>
               </div>
@@ -809,6 +1073,7 @@ function FeaturesSection() {
 
   return (
     <section id="features" className="relative overflow-hidden py-24">
+<<<<<<< HEAD
       <SectionBackground image={SECTION_BACKGROUNDS.features} />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
@@ -822,6 +1087,16 @@ function FeaturesSection() {
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-green-500"
           >
+=======
+      <SectionBackground image={SECTION_BACKGROUNDS.features}>
+        <BackgroundOrb color="linear-gradient(135deg, #166534, #14532d)" size="h-96 w-96" position="-left-48 top-1/3" delay={0} />
+        <BackgroundOrb color="linear-gradient(135deg, #f97316, #ea580c)" size="h-80 w-80" position="bottom-20 right-0" delay={2} />
+      </SectionBackground>
+
+      <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
+        <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer} className="mb-16 text-center">
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-green-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Özellikler
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -834,6 +1109,7 @@ function FeaturesSection() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
+<<<<<<< HEAD
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 24 }}
@@ -841,6 +1117,9 @@ function FeaturesSection() {
               transition={{ duration: 0.45, delay: i * 0.06 }}
               className="glass-card rounded-2xl p-6"
             >
+=======
+            <motion.div key={feature.title} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }} transition={{ duration: 0.5, delay: i * 0.08 }} className="glass-card card-hover rounded-2xl p-6">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500/20 to-green-500/10">
                 <feature.icon className="h-7 w-7 text-orange-500" />
               </div>
@@ -871,10 +1150,14 @@ function WhySection() {
 
       <div ref={ref} className="relative z-10 mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer}>
+<<<<<<< HEAD
           <motion.span
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500"
           >
+=======
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Neden MENTORİX PRO?
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -886,6 +1169,7 @@ function WhySection() {
 
           <div className="space-y-4">
             {points.map((point, i) => (
+<<<<<<< HEAD
               <motion.div
                 key={point}
                 initial={{ opacity: 0, x: -18 }}
@@ -893,6 +1177,9 @@ function WhySection() {
                 transition={{ duration: 0.45, delay: i * 0.06 }}
                 className="glass-card flex items-start gap-4 rounded-xl p-4"
               >
+=======
+              <motion.div key={point} initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }} transition={{ duration: 0.5, delay: i * 0.08 }} className="glass-card flex items-start gap-4 rounded-xl p-4">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                 <span className="text-gray-200">{point}</span>
               </motion.div>
@@ -900,12 +1187,16 @@ function WhySection() {
           </div>
         </motion.div>
 
+<<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, y: 22 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="glass-card rounded-[28px] p-8"
         >
+=======
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.8, delay: 0.25 }} className="glass-card rounded-[28px] p-8">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
           <div className="mb-6 flex items-center justify-between">
             <span className="font-display text-xl font-semibold">Değer Karşılaştırması</span>
             <Star className="h-5 w-5 text-orange-500" />
@@ -923,12 +1214,16 @@ function WhySection() {
                   <span>%{item.value}</span>
                 </div>
                 <div className="h-2 overflow-hidden rounded-full bg-white/8">
+<<<<<<< HEAD
                   <motion.div
                     initial={{ width: 0 }}
                     animate={inView ? { width: `${item.value}%` } : { width: 0 }}
                     transition={{ duration: 1, delay: 0.35 + i * 0.1 }}
                     className="h-full rounded-full bg-gradient-to-r from-orange-500 to-green-500"
                   />
+=======
+                  <motion.div initial={{ width: 0 }} animate={inView ? { width: `${item.value}%` } : { width: 0 }} transition={{ duration: 1, delay: 0.4 + i * 0.12 }} className="h-full rounded-full bg-gradient-to-r from-orange-500 to-green-500" />
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 </div>
               </div>
             ))}
@@ -944,6 +1239,7 @@ function PreviewSection() {
 
   return (
     <section id="showcase" className="relative overflow-hidden py-24">
+<<<<<<< HEAD
       <SectionBackground image={SECTION_BACKGROUNDS.showcase} />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
@@ -957,6 +1253,16 @@ function PreviewSection() {
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500"
           >
+=======
+      <SectionBackground image={SECTION_BACKGROUNDS.showcase}>
+        <BackgroundOrb color="linear-gradient(135deg, #3b82f6, #1d4ed8)" size="h-96 w-96" position="-right-48 top-1/4" delay={0} />
+        <BackgroundOrb color="linear-gradient(135deg, #f97316, #ea580c)" size="h-80 w-80" position="bottom-20 left-0" delay={3} />
+      </SectionBackground>
+
+      <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
+        <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer} className="mb-16 text-center">
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Uygulama Önizlemesi
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -968,18 +1274,26 @@ function PreviewSection() {
         </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
+<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 26 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 26 }}
             transition={{ duration: 0.7 }}
             className="glass-card rounded-[32px] p-6"
           >
+=======
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }} transition={{ duration: 0.8 }} className="glass-card rounded-[32px] p-6">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             <div className="mb-5 flex items-center justify-between">
               <span className="font-display text-lg font-semibold">Mentorix Dashboard</span>
               <div className="glass rounded-full px-3 py-1 text-xs text-gray-300">Canlı Veri Akışı</div>
             </div>
             <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
+<<<<<<< HEAD
               <div className="rounded-2xl bg-zinc-900/55 p-5">
+=======
+              <div className="rounded-2xl bg-zinc-900/60 p-5">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <div className="mb-4 flex items-center justify-between text-sm text-gray-400">
                   <span>Öğrenci Yönetim Paneli</span>
                   <Activity className="h-4 w-4 text-green-500" />
@@ -990,7 +1304,11 @@ function PreviewSection() {
                 </div>
               </div>
               <div className="space-y-4">
+<<<<<<< HEAD
                 <div className="rounded-2xl bg-zinc-900/55 p-5">
+=======
+                <div className="rounded-2xl bg-zinc-900/60 p-5">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <div className="mb-4 flex items-center justify-between text-sm text-gray-400">
                     <span>Genel Durum</span>
                     <PieChart className="h-4 w-4 text-orange-500" />
@@ -998,6 +1316,7 @@ function PreviewSection() {
                   <div className="grid grid-cols-2 gap-3">
                     <div className="rounded-xl bg-white/5 p-4">
                       <p className="text-xs text-gray-500">Takip Oranı</p>
+<<<<<<< HEAD
                       <p className="mt-2 text-2xl font-bold text-orange-500">
                         <AnimatedCounter end={94} suffix="%" />
                       </p>
@@ -1011,6 +1330,17 @@ function PreviewSection() {
                   </div>
                 </div>
                 <div className="rounded-2xl bg-zinc-900/55 p-5">
+=======
+                      <p className="mt-2 text-2xl font-bold text-orange-500"><AnimatedCounter end={94} suffix="%" /></p>
+                    </div>
+                    <div className="rounded-xl bg-white/5 p-4">
+                      <p className="text-xs text-gray-500">Aktif Öğrenci</p>
+                      <p className="mt-2 text-2xl font-bold text-green-500"><AnimatedCounter end={38} /></p>
+                    </div>
+                  </div>
+                </div>
+                <div className="rounded-2xl bg-zinc-900/60 p-5">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <div className="mb-3 flex items-center justify-between text-sm text-gray-400">
                     <span>Akış Durumu</span>
                     <TrendingUp className="h-4 w-4 text-blue-500" />
@@ -1022,12 +1352,16 @@ function PreviewSection() {
                         <span>%{value}</span>
                       </div>
                       <div className="h-2 overflow-hidden rounded-full bg-white/8">
+<<<<<<< HEAD
                         <motion.div
                           initial={{ width: 0 }}
                           animate={inView ? { width: `${value}%` } : { width: 0 }}
                           transition={{ duration: 0.85, delay: 0.45 + i * 0.12 }}
                           className="h-full rounded-full bg-gradient-to-r from-orange-500 via-amber-400 to-green-500"
                         />
+=======
+                        <motion.div initial={{ width: 0 }} animate={inView ? { width: `${value}%` } : { width: 0 }} transition={{ duration: 0.9, delay: 0.5 + i * 0.15 }} className="h-full rounded-full bg-gradient-to-r from-orange-500 via-amber-400 to-green-500" />
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                       </div>
                     </div>
                   ))}
@@ -1036,12 +1370,16 @@ function PreviewSection() {
             </div>
           </motion.div>
 
+<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 24 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="space-y-4"
           >
+=======
+          <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }} transition={{ duration: 0.8, delay: 0.15 }} className="space-y-4">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             <FloatingCard className="rounded-2xl">
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/10">
@@ -1052,12 +1390,19 @@ function PreviewSection() {
                   <p className="text-sm text-gray-400">Veriyi hızlı okuyun</p>
                 </div>
               </div>
+<<<<<<< HEAD
               <p className="text-gray-300">
                 Sistemin tüm modülleri, öğretmenin veya koçun tek bakışta karar verebilmesi için premium bir düzende hazırlanır.
               </p>
             </FloatingCard>
 
             <FloatingCard delay={0.12} className="rounded-2xl">
+=======
+              <p className="text-gray-300">Sistemin tüm modülleri, öğretmenin veya koçun tek bakışta karar verebilmesi için premium bir düzende hazırlanır.</p>
+            </FloatingCard>
+
+            <FloatingCard delay={0.15} className="rounded-2xl">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-500/10">
                   <Layers className="h-6 w-6 text-green-500" />
@@ -1067,6 +1412,7 @@ function PreviewSection() {
                   <p className="text-sm text-gray-400">Kontrol ve sadelik bir arada</p>
                 </div>
               </div>
+<<<<<<< HEAD
               <p className="text-gray-300">
                 Takip, analiz ve süreç yönetimi aynı yapı içinde düzenli katmanlar halinde sunulur.
               </p>
@@ -1079,6 +1425,13 @@ function PreviewSection() {
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center gap-2 text-center"
               >
+=======
+              <p className="text-gray-300">Takip, analiz ve süreç yönetimi aynı yapı içinde düzenli katmanlar halinde sunulur.</p>
+            </FloatingCard>
+
+            <FloatingCard delay={0.25} className="rounded-2xl">
+              <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-2 text-center">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <ShoppingBag className="h-4 w-4" />
                 Shopier'den Satın Al
               </a>
@@ -1094,6 +1447,7 @@ function HowItWorksSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const steps = [
+<<<<<<< HEAD
     {
       number: '1',
       title: 'İhtiyacınıza uygun sistemi seçin',
@@ -1124,6 +1478,13 @@ function HowItWorksSection() {
       desc: 'Satın alma öncesi veya sonrası destek alın.',
       icon: MessageCircle,
     },
+=======
+    { number: '1', title: 'İhtiyacınıza uygun sistemi seçin', desc: 'Alanınıza göre en uygun hazır sistemi belirleyin.', icon: Target },
+    { number: '2', title: 'Shopier üzerinden güvenle satın alın', desc: 'Ödemenizi güvenli ve hızlı biçimde tamamlayın.', icon: ShoppingBag },
+    { number: '3', title: 'Sistem size teslim edilsin', desc: 'Hazır yapı size hızlıca ulaştırılsın.', icon: CheckCircle2 },
+    { number: '4', title: 'Hemen kullanmaya başlayın', desc: 'Öğrenci takibini aynı gün profesyonel hale getirin.', icon: Zap },
+    { number: '5', title: 'Gerekirse WhatsApp üzerinden bilgi alın', desc: 'Satın alma öncesi veya sonrası destek alın.', icon: MessageCircle },
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
   ];
 
   return (
@@ -1131,6 +1492,7 @@ function HowItWorksSection() {
       <SectionBackground image={SECTION_BACKGROUNDS.howItWorks} />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
+<<<<<<< HEAD
         <motion.div
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -1141,6 +1503,10 @@ function HowItWorksSection() {
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500"
           >
+=======
+        <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer} className="mb-16 text-center">
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Satın Alma Süreci
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -1150,6 +1516,7 @@ function HowItWorksSection() {
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {steps.map((step, i) => (
+<<<<<<< HEAD
             <motion.div
               key={step.number}
               initial={{ opacity: 0, y: 24 }}
@@ -1158,6 +1525,10 @@ function HowItWorksSection() {
               className="relative"
             >
               <div className="glass-card h-full rounded-2xl p-6 text-center">
+=======
+            <motion.div key={step.number} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }} transition={{ duration: 0.6, delay: i * 0.1 }} className="relative">
+              <div className="glass-card card-hover h-full rounded-2xl p-6 text-center">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <div className="absolute -top-4 left-1/2 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xs font-bold shadow-lg shadow-orange-500/30">
                   {step.number}
                 </div>
@@ -1179,6 +1550,7 @@ function WhoIsItForSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const audiences = [
+<<<<<<< HEAD
     {
       icon: Users,
       title: 'Bireysel öğretmenler',
@@ -1204,10 +1576,18 @@ function WhoIsItForSection() {
       title: 'Süreci profesyonelleştirmek isteyen eğitimciler',
       desc: 'Hazır ve güven veren bir sistem arayanlar için.',
     },
+=======
+    { icon: Users, title: 'Bireysel öğretmenler', desc: 'Kendi öğrencilerini profesyonel biçimde takip etmek isteyen eğitimciler için.' },
+    { icon: GraduationCap, title: 'Eğitim koçları', desc: 'Koçluk akışını sistemli hale getirmek isteyenler için.' },
+    { icon: BookOpen, title: 'Özel ders verenler', desc: 'Birebir ilerlemeyi net görmek isteyen öğretmenler için.' },
+    { icon: Award, title: 'Kurs merkezi eğitmenleri', desc: 'Kurumsal görünüm ve düzen isteyen eğitim yapıları için.' },
+    { icon: Target, title: 'Süreci profesyonelleştirmek isteyen eğitimciler', desc: 'Hazır ve güven veren bir sistem arayanlar için.' },
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
   ];
 
   return (
     <section className="relative overflow-hidden py-24">
+<<<<<<< HEAD
       <SectionBackground image={SECTION_BACKGROUNDS.whoIsItFor} />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
@@ -1221,6 +1601,15 @@ function WhoIsItForSection() {
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-green-500"
           >
+=======
+      <SectionBackground image={SECTION_BACKGROUNDS.whoIsItFor}>
+        <BackgroundOrb color="linear-gradient(135deg, #166534, #14532d)" size="h-80 w-80" position="right-0 top-1/4" delay={0} />
+      </SectionBackground>
+
+      <div ref={ref} className="relative z-10 mx-auto max-w-7xl px-6">
+        <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer} className="mb-16 text-center">
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-green-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Hedef Kitle
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -1230,6 +1619,7 @@ function WhoIsItForSection() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
           {audiences.map((audience, i) => (
+<<<<<<< HEAD
             <motion.div
               key={audience.title}
               initial={{ opacity: 0, y: 24 }}
@@ -1237,6 +1627,9 @@ function WhoIsItForSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="glass-card rounded-2xl p-6 text-center"
             >
+=======
+            <motion.div key={audience.title} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }} transition={{ duration: 0.6, delay: i * 0.1 }} className="glass-card card-hover rounded-2xl p-6 text-center">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500/20 to-green-600/10">
                 <audience.icon className="h-7 w-7 text-green-500" />
               </div>
@@ -1255,6 +1648,7 @@ function ContactCTASection() {
 
   return (
     <section className="relative overflow-hidden py-24">
+<<<<<<< HEAD
       <SectionBackground
         image={SECTION_BACKGROUNDS.showcase}
         overlay="linear-gradient(180deg, rgba(5,5,6,0.76) 0%, rgba(5,5,6,0.88) 100%)"
@@ -1266,6 +1660,16 @@ function ContactCTASection() {
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500"
           >
+=======
+      <SectionBackground image={SECTION_BACKGROUNDS.showcase} overlay="linear-gradient(180deg, rgba(5,5,6,0.76) 0%, rgba(5,5,6,0.9) 100%)">
+        <BackgroundOrb color="linear-gradient(135deg, #f97316, #ea580c)" size="h-96 w-96" position="left-1/4 top-1/2 -translate-y-1/2" delay={0} />
+        <BackgroundOrb color="linear-gradient(135deg, #166534, #14532d)" size="h-80 w-80" position="right-1/4 top-1/2 -translate-y-1/2" delay={2} />
+      </SectionBackground>
+
+      <div ref={ref} className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer}>
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Güven ve İletişim
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -1275,6 +1679,7 @@ function ContactCTASection() {
             Ürünler hakkında hızlı bilgi almak için WhatsApp'tan ulaşın, markayı yakından görmek için Instagram'ı inceleyin, hazırsanız Shopier üzerinden güvenle satın alın.
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-col justify-center gap-4 sm:flex-row">
+<<<<<<< HEAD
             <a
               href={WHATSAPP_LINK}
               target="_blank"
@@ -1299,6 +1704,17 @@ function ContactCTASection() {
               rel="noopener noreferrer"
               className="btn-primary flex items-center justify-center gap-3 px-8 py-4 text-lg"
             >
+=======
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-whatsapp flex items-center justify-center gap-3 px-8 py-4 text-lg">
+              <MessageCircle className="h-5 w-5" />
+              WhatsApp'tan Hızlı Bilgi Al
+            </a>
+            <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="btn-secondary flex items-center justify-center gap-3 px-8 py-4 text-lg">
+              <Instagram className="h-5 w-5" />
+              Instagram'da İncele
+            </a>
+            <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-3 px-8 py-4 text-lg">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <ShoppingBag className="h-5 w-5" />
               Shopier'den Güvenle Satın Al
             </a>
@@ -1316,6 +1732,7 @@ function FAQSection() {
   const faqs = [
     {
       question: 'Bu sistemler kimler için uygun?',
+<<<<<<< HEAD
       answer:
         'MENTORİX PRO sistemleri; LGS koçları, YKS koçları, İngilizce ve Fransızca öğretmenleri, özel ders verenler, eğitim koçları ve kurs merkezi eğitmenleri için uygundur.',
     },
@@ -1333,6 +1750,21 @@ function FAQSection() {
       question: 'Google Sheets tabanlı mı?',
       answer:
         'Evet. Sistem Google Sheets tabanlıdır ve düzenli veri yönetimi ile hızlı erişim sağlar.',
+=======
+      answer: 'MENTORİX PRO sistemleri; LGS koçları, YKS koçları, İngilizce ve Fransızca öğretmenleri, özel ders verenler, eğitim koçları ve kurs merkezi eğitmenleri için uygundur.',
+    },
+    {
+      question: 'Satın aldıktan sonra nasıl teslim ediliyor?',
+      answer: 'Shopier üzerinden satın alma tamamlandıktan sonra sistem hızlı şekilde tarafınıza teslim edilir ve kullanıma hazır olur.',
+    },
+    {
+      question: 'Kullanımı zor mu?',
+      answer: 'Hayır. Yapı sade, anlaşılır ve öğretmenlerin günlük kullanımı için pratik olacak şekilde hazırlanmıştır.',
+    },
+    {
+      question: 'Google Sheets tabanlı mı?',
+      answer: 'Evet. Sistem Google Sheets tabanlıdır ve düzenli veri yönetimi ile hızlı erişim sağlar.',
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
     },
     {
       question: 'Shopier üzerinden güvenli ödeme yapılabiliyor mu?',
@@ -1340,8 +1772,12 @@ function FAQSection() {
     },
     {
       question: 'Destek alabilir miyim?',
+<<<<<<< HEAD
       answer:
         'Evet. Satın alma öncesinde ve sonrasında WhatsApp üzerinden bilgi ve yönlendirme alabilirsiniz.',
+=======
+      answer: 'Evet. Satın alma öncesinde ve sonrasında WhatsApp üzerinden bilgi ve yönlendirme alabilirsiniz.',
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
     },
   ];
 
@@ -1350,6 +1786,7 @@ function FAQSection() {
       <SectionBackground image={SECTION_BACKGROUNDS.faq} />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-3xl px-6">
+<<<<<<< HEAD
         <motion.div
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -1360,6 +1797,10 @@ function FAQSection() {
             variants={fadeInUp}
             className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500"
           >
+=======
+        <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer} className="mb-16 text-center">
+          <motion.span variants={fadeInUp} className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-orange-500">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             SSS
           </motion.span>
           <motion.h2 variants={fadeInUp} className="font-display mb-6 text-3xl font-bold md:text-5xl">
@@ -1369,6 +1810,7 @@ function FAQSection() {
 
         <div className="space-y-4">
           {faqs.map((faq, i) => (
+<<<<<<< HEAD
             <motion.div
               key={faq.question}
               initial={{ opacity: 0, y: 18 }}
@@ -1399,6 +1841,16 @@ function FAQSection() {
                 transition={{ duration: 0.25 }}
                 className="overflow-hidden"
               >
+=======
+            <motion.div key={faq.question} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.5, delay: i * 0.1 }} className="glass-card overflow-hidden rounded-xl">
+              <button onClick={() => setOpenIndex(openIndex === i ? null : i)} className="flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-white/5">
+                <span className="font-display pr-4 font-semibold">{faq.question}</span>
+                <motion.div animate={{ rotate: openIndex === i ? 180 : 0 }} transition={{ duration: 0.3 }} className="flex-shrink-0">
+                  {openIndex === i ? <Minus className="h-5 w-5 text-orange-500" /> : <Plus className="h-5 w-5 text-orange-500" />}
+                </motion.div>
+              </button>
+              <motion.div initial={false} animate={{ height: openIndex === i ? 'auto' : 0, opacity: openIndex === i ? 1 : 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <p className="px-6 pb-6 leading-relaxed text-gray-300">{faq.answer}</p>
               </motion.div>
             </motion.div>
@@ -1414,10 +1866,17 @@ function FinalCTASection() {
 
   return (
     <section className="relative overflow-hidden py-32">
+<<<<<<< HEAD
       <SectionBackground
         image={SECTION_BACKGROUNDS.finalCta}
         overlay="linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.88) 100%)"
       />
+=======
+      <SectionBackground image={SECTION_BACKGROUNDS.finalCta} overlay="linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.88) 100%)">
+        <BackgroundOrb color="linear-gradient(135deg, #f97316, #ea580c)" size="h-[500px] w-[500px]" position="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" delay={0} />
+        <div className="absolute inset-0 bg-black/50" />
+      </SectionBackground>
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
 
       <div ref={ref} className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={staggerContainer}>
@@ -1425,13 +1884,18 @@ function FinalCTASection() {
             <Sparkles className="h-5 w-5 text-orange-500" />
             <span className="font-medium">Premium Koç Takip Sistemleri</span>
           </motion.div>
+<<<<<<< HEAD
           <motion.h2 variants={fadeInUp} className="text-glow-white font-display mb-6 text-4xl font-bold md:text-6xl">
+=======
+          <motion.h2 variants={fadeInUp} className="font-display text-glow-white mb-6 text-4xl font-bold md:text-6xl">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
             Takibinizi Güçlendirin, <span className="gradient-text-orange">Koçluğunuzu Profesyonelleştirin</span>
           </motion.h2>
           <motion.p variants={fadeInUp} className="mx-auto mb-12 max-w-2xl text-xl text-gray-200">
             MENTORİX PRO ile öğrenci yönetimini modern, düzenli ve profesyonel bir sisteme dönüştürün.
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-col justify-center gap-4 sm:flex-row">
+<<<<<<< HEAD
             <a
               href={SHOPIER_LINK}
               target="_blank"
@@ -1447,6 +1911,13 @@ function FinalCTASection() {
               rel="noopener noreferrer"
               className="btn-whatsapp flex items-center justify-center gap-3 px-10 py-5 text-lg"
             >
+=======
+            <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-3 px-10 py-5 text-lg">
+              <ShoppingBag className="h-5 w-5" />
+              Hemen Satın Al
+            </a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-whatsapp flex items-center justify-center gap-3 px-10 py-5 text-lg">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
               <MessageCircle className="h-5 w-5" />
               WhatsApp ile İletişime Geç
             </a>
@@ -1464,7 +1935,11 @@ function Footer() {
         <div className="mb-12 grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <a href="#" className="mb-6 flex items-center gap-3">
+<<<<<<< HEAD
               <div className="glass inline-flex rounded-2xl px-4 py-3 shadow-[0_0_30px_rgba(249,115,22,0.08)]">
+=======
+              <div className="glass inline-flex rounded-2xl px-4 py-3 shadow-[0_0_30px_rgba(249,115,22,0.1)]">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <img
                   src="/logo.png"
                   alt="MENTORİX PRO logosu"
@@ -1480,6 +1955,7 @@ function Footer() {
               LGS, YKS, Fransızca ve İngilizce koçları için premium öğrenci takip sistemleri. Koçluk sürecinizi profesyonel bir sisteme dönüştürün.
             </p>
             <div className="flex gap-4">
+<<<<<<< HEAD
               <a
                 href={INSTAGRAM_LINK}
                 target="_blank"
@@ -1502,6 +1978,15 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="glass flex h-10 w-10 items-center justify-center rounded-xl transition-colors hover:bg-white/10"
               >
+=======
+              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="glass flex h-10 w-10 items-center justify-center rounded-xl transition-colors hover:bg-white/10">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="glass flex h-10 w-10 items-center justify-center rounded-xl transition-colors hover:bg-white/10">
+                <MessageCircle className="h-5 w-5" />
+              </a>
+              <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="glass flex h-10 w-10 items-center justify-center rounded-xl transition-colors hover:bg-white/10">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                 <ShoppingBag className="h-5 w-5" />
               </a>
             </div>
@@ -1510,6 +1995,7 @@ function Footer() {
           <div>
             <h4 className="font-display mb-6 font-semibold">Ürünler</h4>
             <ul className="space-y-3">
+<<<<<<< HEAD
               {[
                 'LGS Koç Takip Sistemi',
                 'YKS Koç Takip Sistemi',
@@ -1523,6 +2009,11 @@ function Footer() {
                     rel="noopener noreferrer"
                     className="text-sm text-gray-400 transition-colors hover:text-white"
                   >
+=======
+              {['LGS Koç Takip Sistemi', 'YKS Koç Takip Sistemi', 'Fransızca Koç Takip Sistemi', 'İngilizce Koç Takip Sistemi'].map((product) => (
+                <li key={product}>
+                  <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 transition-colors hover:text-white">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                     {product}
                   </a>
                 </li>
@@ -1534,34 +2025,46 @@ function Footer() {
             <h4 className="font-display mb-6 font-semibold">Bağlantılar</h4>
             <ul className="space-y-3">
               <li>
+<<<<<<< HEAD
                 <a
                   href={SHOPIER_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white"
                 >
+=======
+                <a href={SHOPIER_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <ShoppingBag className="h-4 w-4" />
                   Shopier
                 </a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a
                   href={INSTAGRAM_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white"
                 >
+=======
+                <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <Instagram className="h-4 w-4" />
                   Instagram
                 </a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white"
                 >
+=======
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white">
+>>>>>>> e38b482e504bbb2e476a01a304155eaf800690c7
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
                 </a>
